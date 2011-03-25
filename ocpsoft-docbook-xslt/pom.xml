@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ocpsoft</groupId>
+	<artifactId>ocpsoft-docbook-xslt</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.1-SNAPSHOT</version>
+
+	<name>OCPSoft.com DocBook XSLT</name>
+	<description>
+      The main project to transform DocBook XML into XHTML and other formats for
+      OCPSoft.com Documentation.
+   </description>
+	<url>http://ocpsoft.com/</url>
+
+	<contributors>
+		<contributor>
+			<name>Pete Muir</name>
+		</contributor>
+		<contributor>
+			<name>Mark Newton</name>
+		</contributor>
+		<contributor>
+			<name>Lincoln Baxter, III</name>
+		</contributor>
+	</contributors>
+
+	<repositories>
+		<repository>
+			<id>repository.jboss.org</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jbossorg-docbook-xslt</artifactId>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss</groupId>
+				<artifactId>jbossorg-docbook-xslt</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.jboss.maven.plugins</groupId>
+					<artifactId>maven-jdocbook-plugin</artifactId>
+					<version>2.1.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>1.0-beta-3</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>ocpsoft.ftp.public</id>
+			<url>ftp://ocpsoft.com/ocpsoft.com/repository</url>
+		</repository>
+	</distributionManagement>
+
+</project>

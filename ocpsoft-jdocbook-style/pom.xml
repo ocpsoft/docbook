@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ocpsoft</groupId>
+	<artifactId>ocpsoft-jdocbook-style</artifactId>
+	<packaging>jdocbook-style</packaging>
+	<version>1.0.1-SNAPSHOT</version>
+
+	<name>OCPSoft Documentation Styles</name>
+	<description>
+      The JDocBook styles for the OCPSoft.com Documentation.
+   </description>
+	<url>http://ocpsoft.com/</url>
+
+	<contributors>
+		<contributor>
+			<name>Pete Muir</name>
+		</contributor>
+		<contributor>
+			<name>Mark Newton</name>
+		</contributor>
+		<contributor>
+			<name>Lincoln Baxter, III</name>
+		</contributor>
+	</contributors>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repository.jboss.org</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<repositories>
+		<repository>
+			<id>repository.jboss.org</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jboss.maven.plugins</groupId>
+				<artifactId>maven-jdocbook-style-plugin</artifactId>
+				<version>2.0.0</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>1.0-beta-3</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>ocpsoft.ftp.public</id>
+			<url>ftp://ocpsoft.com/ocpsoft.com/repository</url>
+		</repository>
+	</distributionManagement>
+
+</project>
