@@ -22,4 +22,10 @@
 		<module>ocpsoft-jdocbook-style</module>
 	</modules>
 
+	<scm>
+		<connection>scm:git:git://github.com/ocpsoft/docbook.git</connection>
+		<developerConnection>scm:git:git@github.com:ocpsoft/docbook.git</developerConnection>
+		<url>http://github.com/ocpsoft/docbook</url>
+	</scm>
+
 </project>
